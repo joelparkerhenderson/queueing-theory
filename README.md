@@ -73,9 +73,9 @@ Queue types and service types describe how the queue chooses which items to proc
 
   * Priority: serve customers based on their priority level; these levels could be based on status, urgency, payment, etc.
 
-  * Shortest Job First (SJF): serve the person who needs the least amount of service.
+  * Shortest Job First (SJF): serve the customer who needs the smallest amount of service.
 
-  * Longest Job First (LJF): serve the person who needs the greatest amount of service.
+  * Longest Job First (LJF): serve the customer who needs the largest amount of service.
 
   * Time Sharing: serve everyone at the same time; service capacity is distributed evenly among everyone waiting.
 
