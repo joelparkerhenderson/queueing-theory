@@ -180,9 +180,9 @@ Example:
 
   * κ = 100 means there are 100 items.
 
-  * κ < 100 means there are less than 100 items.
+  * κ > 100 means there are more than 100 items.
 
-  * κ ≫ 100 means there are a large number of items, many more than 100.
+  * κ ≫ 100 means there are a many more than 100 items.
 
 
 
