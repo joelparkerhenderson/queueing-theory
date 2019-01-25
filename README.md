@@ -20,6 +20,7 @@ Contents:
   * [Standard notation](#standard-notation)
 * [Activity tracking](#activity-tracking)
   * [Activity examples](#activity-examples)
+  * [Little's Law](#little-s-law)
   * [Key performance indcators (KPIs)](#key-performance-indcators-kpis)
 * [Epilog](#epilog)
   * [See also](#see-also)
@@ -235,6 +236,21 @@ Examples:
   * Aθ: Activity step time: how much time elapses from completed to next completed.
 
 
+### Little's Law
+
+Little's law is a theorem by John Little which states: the long-term average number L of customers in a stationary system is equal to the long-term average effective arrival rate λ multiplied by the average time W that a customer spends in the system.
+
+Example notation:
+
+  * L is the long-term average number of customers in the system.
+
+  * λ is the long-term average effective arrival rate.
+
+  * W is the average time that a customer spends in the system.
+
+  * L = λ W is Little's law.
+
+
 ### Key performance indcators (KPIs)
 
 We typically track many things about the activities in the queue, and we want to summarize the results by choosing a shortlist of the most relevant ones for our projects.
@@ -262,8 +278,10 @@ Wikipedia:
 
   * [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
 
+  * [Little's law](https://en.wikipedia.org/wiki/Little%27s_law)
+
   * [Markov chain](https://en.wikipedia.org/wiki/Markov_chain)
-  
+
 Wikipedia areas where we use queues in many projects:
 
   * [Project management](https://en.wikipedia.org/wiki/Project_management)
