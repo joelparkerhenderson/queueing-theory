@@ -218,10 +218,12 @@ Examples:
 
   * Aλ: Activity arrival rate: how many items are requested per time unit.
 
-  * Aσ: Activity dropout rate: how many items are abandoned per time unit.
-
   * Aμ: Activity service rate: how many items are completed per time unit.
 
+  * Aσ: Activity dropout rate: how many items are abandoned per time unit.
+
+  * Aρ: Activity utilization ratio: how many items are arriving vs. completing.
+  
   * Aε: Activity error ratio: how many items are completed with errors vs. total.
 
   * Aτ: Activity lead time: how much time elapses from requested to completed.
