@@ -182,7 +182,7 @@ Example:
 
   * κ > 100 means there are more than 100 items.
 
-  * κ ≫ 100 means there are a many more than 100 items.
+  * κ ≫ 100 means there are many more than 100 items.
 
 
 
