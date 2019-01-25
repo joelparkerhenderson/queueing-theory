@@ -250,6 +250,16 @@ Example notation:
 
   * L = λ W is Little's law.
 
+Little's law assumptions:
+
+  * All measurement units are consistent
+
+  * Conservation of flow, meaning the average arrival rate equals the average departure rate.
+  
+  * All work that enters the system then flows through to completion.
+  
+  * The system is “stable”, meaning the average age of items are neither increasing or decreasing, and the total number of items is roughly the same at the beginning and at the end.
+
 
 ### Key performance indcators (KPIs)
 
