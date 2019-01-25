@@ -252,7 +252,7 @@ Example notation:
 
 Little's law assumptions:
 
-  * All measurement units are consistent
+  * All measurement units are consistent.
 
   * Conservation of flow, meaning the average arrival rate equals the average departure rate.
   
