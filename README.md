@@ -216,7 +216,7 @@ Examples:
 
   * Aκ: Activity count: how many items are in the queue.
 
-  * Aλ: Activity arrival rate: how many items are requested per time unit.
+  * Aλ: Activity arrival rate: how many items are incoming per time unit.
 
   * Aμ: Activity service rate: how many items are completed per time unit.
 
