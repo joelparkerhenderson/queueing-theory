@@ -260,14 +260,18 @@ Wikipedia:
 
   * [Queueing theory](https://en.wikipedia.org/wiki/Queueing_theory)
 
+  * [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
+
+  * [Markov chain](https://en.wikipedia.org/wiki/Markov_chain)
+  
+Wikipedia areas where we use queues in many projects:
+
   * [Project management](https://en.wikipedia.org/wiki/Project_management)
 
   * [Message queue](https://en.wikipedia.org/wiki/Message_queue)
 
   * [DevOps](https://en.wikipedia.org/wiki/DevOps)
 
-  * [Markov chain](https://en.wikipedia.org/wiki/Markov_chain)
-  
 Introductions by John D. Cook:
 
   * [The science of waiting in line](https://www.johndcook.com/blog/2019/01/23/queueing/)
