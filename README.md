@@ -266,6 +266,8 @@ Wikipedia:
 
   * [DevOps](https://en.wikipedia.org/wiki/DevOps)
 
+  * [Markov chain](https://en.wikipedia.org/wiki/Markov_chain)
+  
 Introductions by John D. Cook:
 
   * [The science of waiting in line](https://www.johndcook.com/blog/2019/01/23/queueing/)
