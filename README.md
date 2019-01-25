@@ -163,7 +163,7 @@ Examples:
 
   * τ = 5s means an item is added to the queue, then serviced 5 seconds later.
 
-  * ω = 4s means an item waits in the queue for 3 seconds, then work starts.
+  * ω = 4s means an item waits in the queue for 4 seconds, then work starts.
 
   * φ = 1s means an item takes 1 second of work, then is complete.
 
