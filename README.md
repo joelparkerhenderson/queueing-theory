@@ -280,6 +280,8 @@ Introductions with more detail:
 
   * [Operations Research - Notes. By J E Beasley](http://people.brunel.ac.uk/~mastjjb/jeb/or/queue.html)
 
+  * [Little’s Law – the basis of Lean and Kanban](http://itsadeliverything.com/littles-law-the-basis-of-lean-and-kanban)
+
   * [Investopedia: Queueing theory](https://www.investopedia.com/terms/q/queuing-theory.asp)
 
 
