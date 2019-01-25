@@ -8,15 +8,22 @@ Contents:
   * [Project management kanban boards](#project-management-kanban-boards)
   * [Inter-process communication message queues](#inter-process-communication-message-queues)
   * [Devops continous deployment pipelines](#devops-continous-deployment-pipelines)
+* [Queue terminology](#queue-terminology)
+  * [Queue types and service types](#queue-types-and-service-types)
+  * [Queue dropouts](#queue-dropouts)
 * [Queueing theory notation](#queueing-theory-notation)
   * [Arrival rate, service rate, dropout rate](#arrival-rate-service-rate-dropout-rate)
   * [Utiltization ratio](#utiltization-ratio)
   * [Error ratio](#error-ratio)
   * [Lead time, wait time, work time, step time](#lead-time-wait-time-work-time-step-time)
   * [Count](#count)
+  * [Standard notation](#standard-notation)
 * [Activity tracking](#activity-tracking)
   * [Activity examples](#activity-examples)
   * [Key performance indcators (KPIs)](#key-performance-indcators-kpis)
+* [Epilog](#epilog)
+  * [See also](#see-also)
+  * [Thanks](#thanks)
 
 
 ## Introduction
@@ -49,6 +56,39 @@ Some relevant products are e.g. [RabbitMQ](https://en.wikipedia.org/wiki/RabbitM
 For example, we use a continuous integration server to create a software release candidate, test it, then deploy it.
 
 Some relevant products are e.g. [Jenkins](https://en.wikipedia.org/wiki/Jenkins_(software)), [Bamboo](https://en.wikipedia.org/wiki/Bamboo_(software)), [Azure DevOps](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio#Azure_DevOps).
+
+
+## Queue terminology
+
+Queue terminology is a big topic. This section has some of our common terminology. For the examples, we will use the idea of a customer waiting in line.
+
+
+### Queue types and service types
+
+Queue types and service types describe how the queue chooses which items to process.
+
+  * First In First Out (FIFO): serve the customer who has been waiting for the longest time.
+
+  * Last In First Out (LIFO): serve the customer who has been waiting for the shortest time.
+
+  * Priority: serve customers based on their priority level; these levels could be based on status, urgency, payment, etc.
+
+  * Shortest Job First (SJF): serve the person who needs the least amount of service.
+
+  * Longest Job First (LJF): serve the person who needs the greatest amount of service.
+
+  * Time Sharing: serve everyone at the same time; service capacity is distributed evenly among everyone waiting.
+
+
+### Queue dropouts
+
+Queue dropouts are when a customer does not make it through the queue.
+
+  * Balking: when a customer decides not to start waiting for service because the wait time threatens to be too long. 
+
+  * Reneging: when a customer who has waited already decides to leave because they’ve wasted too much time. 
+
+  * Jockeying: when a customer switches between queues in a tandem queue system, trying to get a shorter wait.
 
 
 ## Queueing theory notation
@@ -145,6 +185,24 @@ Example:
   * κ ≫ 100 means there are a large number of items, many more than 100.
 
 
+
+### Standard notation
+
+Standard notation for queueing theory also uses these symbols:
+
+  * n: the number of items in the system.
+
+  * A: the arrival process probability distribution.
+  
+  * B: the service process probability distribution.
+
+  * C: the number of servers.
+
+  * D: the maximum number of items allowed in the queue at any given time, waiting or being served (without getting bumped).
+
+  * E: the maximum number of items total.
+
+
 ## Activity tracking
 
 
@@ -188,4 +246,43 @@ We have built many projects, and we believe the most valuable summary indicators
   * Dε = Delivery error ratio. Some quality assurance teams call this "change fail rate" or "percentage of deployment rollbacks".
 
   * Rτ = Restore lead time. Some site reliability engineers call this "time to restore service" or "mean time to restore (MTTR)".
+
+
+
+## Epilog
+
+
+### See also
+
+Wikipedia:
+
+  * [Queueing theory](https://en.wikipedia.org/wiki/Queueing_theory)
+
+  * [Project management](https://en.wikipedia.org/wiki/Project_management)
+
+  * [Message queue](https://en.wikipedia.org/wiki/Message_queue)
+
+  * [DevOps](https://en.wikipedia.org/wiki/DevOps)
+
+Introductions by John D. Cook:
+
+  * [The science of waiting in line](https://www.johndcook.com/blog/2019/01/23/queueing/)
+
+  * [Server utilization: Joel on queuing](https://www.johndcook.com/blog/2009/01/30/server-utilization-joel-on-queuing/)
+
+  * [What happens when you add a new teller?](https://www.johndcook.com/blog/2008/10/21/what-happens-when-you-add-a-new-teller/)
+
+Introductions with more detail:
+
+  * [Queuing Theory: Simple Definition, Notation and Terminology](https://www.statisticshowto.datasciencecentral.com/queuing-theory/)
+
+  * [Operations Research - Notes. By J E Beasley](http://people.brunel.ac.uk/~mastjjb/jeb/or/queue.html)
+
+  * [Investopedia: Queueing theory](https://www.investopedia.com/terms/q/queuing-theory.asp)
+
+
+
+### Thanks
+
+[Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations. By Nicole Forsgren, Jez Humble, Gene Kim](https://www.amazon.com/dp/B07B9F83WM). This book is excellent for high level devops, and directly informs our choice of KPIs. The KPIs on this page align with the book's recommendations.
 
