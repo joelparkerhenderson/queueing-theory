@@ -167,7 +167,7 @@ Examples:
 
   * φ = 1s means an item takes 1 second of work, then is complete.
 
-  * θ = 1s means there's 1 second between one completiong and the next completion.
+  * θ = 1s means there's 1 second between one completion and the next completion.
 
 
 ### Count
