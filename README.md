@@ -241,13 +241,13 @@ We typically track many things about the activities in the queue, and we want to
 
 We have built many projects, and we believe the most valuable summary indicators are:
 
-  * Dτ = Delivery lead time. Some product teams know this as "from concept to customer" or "from idea to implementation".
+  * Dτ = Delivery lead time. Product teams may say "from concept to customer" or "from idea to implementation".
 
-  * Dμ = Delivery service rate. Some devops teams know this as "continuous deployment frequency" or "shipping X times per day".
+  * Dμ = Delivery service rate. Devops teams may say "deployment frequency" or "we ship X times per day".
 
-  * Dε = Delivery error ratio. Some quality assurance teams call this "change fail rate" or "percentage of deployment rollbacks".
+  * Dε = Delivery error ratio. Quality teams may say "change fail rate" or "percentage of rollbacks".
 
-  * Rτ = Restore lead time. Some site reliability engineers call this "time to restore service" or "mean time to restore (MTTR)".
+  * Rτ = Restore lead time. Site reliability engineers may say "time to restore service" or "mean time to restore (MTTR)".
 
 
 
