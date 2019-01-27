@@ -1,19 +1,19 @@
 # Queueing theory
 
-Queueing theory is the mathematical study of waiting lines, or queues. We use queueing theory in our software development, for purposes such as project management kanban boards, inter-process communication message queues, and devops continous deployment pipelines.
+Queueing theory is the mathematical study of waiting lines, or queues. We use queueing theory in our software development, for purposes such as project management kanban boards, inter-process communication message queues, and devops continuous deployment pipelines.
 
 Contents:
 
 * [Introduction](#introduction)
   * [Project management kanban boards](#project-management-kanban-boards)
   * [Inter-process communication message queues](#inter-process-communication-message-queues)
-  * [Devops continous deployment pipelines](#devops-continous-deployment-pipelines)
+  * [Devops continuous deployment pipelines](#devops-continuous-deployment-pipelines)
 * [Queue terminology](#queue-terminology)
   * [Queue types and service types](#queue-types-and-service-types)
   * [Queue dropouts](#queue-dropouts)
 * [Queueing theory notation](#queueing-theory-notation)
   * [Arrival rate, service rate, dropout rate](#arrival-rate-service-rate-dropout-rate)
-  * [Utiltization ratio](#utiltization-ratio)
+  * [Utilitization ratio](#utilitization-ratio)
   * [Error ratio](#error-ratio)
   * [Lead time, wait time, work time, step time](#lead-time-wait-time-work-time-step-time)
   * [Count](#count)
@@ -21,7 +21,7 @@ Contents:
 * [Activity tracking](#activity-tracking)
   * [Activity examples](#activity-examples)
   * [Little's Law](#little-s-law)
-  * [Key performance indcators (KPIs)](#key-performance-indcators-kpis)
+  * [Key performance indicators (KPIs)](#key-performance-indicators-kpis)
 * [Epilog](#epilog)
   * [See also](#see-also)
   * [Thanks](#thanks)
@@ -35,7 +35,7 @@ We use queueing theory in our software projects for many purposes:
 
   * Inter-process communication message queues
  
-  * Devops continous deployment pipelines
+  * Devops continuous deployment pipelines
 
 
 ### Project management kanban boards
@@ -52,7 +52,7 @@ For example, we want to know how one program sends requests to another program.
 Some relevant products are e.g. [RabbitMQ](https://en.wikipedia.org/wiki/RabbitMQ), [ActiveMQ](https://en.wikipedia.org/wiki/Apache_ActiveMQ), [ZeroMQ](https://en.wikipedia.org/wiki/ZeroMQ).
 
 
-### Devops continous deployment pipelines
+### Devops continuous deployment pipelines
 
 For example, we use a continuous integration server to create a software release candidate, test it, then deploy it.
 
@@ -118,7 +118,7 @@ Examples:
   * λ < μ means the arrival rate is less than the service rate; the queue is getting smaller, other than dropouts.
 
 
-### Utiltization ratio
+### Utilitization ratio
 
 The most important notation that summarizes a queue:
 
@@ -261,7 +261,7 @@ Little's law assumptions:
   * The system is “stable”, meaning the average age of items are neither increasing or decreasing, and the total number of items is roughly the same at the beginning and at the end.
 
 
-### Key performance indcators (KPIs)
+### Key performance indicators (KPIs)
 
 We typically track many things about the activities in the queue, and we want to summarize the results by choosing a shortlist of the most relevant ones for our projects.
 
