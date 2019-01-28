@@ -13,7 +13,7 @@ Contents:
   * [Queue dropouts](#queue-dropouts)
 * [Queueing theory notation](#queueing-theory-notation)
   * [Arrival rate, service rate, dropout rate](#arrival-rate-service-rate-dropout-rate)
-  * [Utilitization ratio](#utilitization-ratio)
+  * [Utilitization ratio](#utilization-ratio)
   * [Error ratio](#error-ratio)
   * [Lead time, wait time, work time, step time](#lead-time-wait-time-work-time-step-time)
   * [Count](#count)
@@ -118,7 +118,7 @@ Examples:
   * λ < μ means the arrival rate is less than the service rate; the queue is getting smaller, other than dropouts.
 
 
-### Utilitization ratio
+### Utilization ratio
 
 The most important notation that summarizes a queue:
 
