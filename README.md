@@ -13,7 +13,7 @@ Contents:
   * [Queue dropouts](#queue-dropouts)
 * [Queueing theory notation](#queueing-theory-notation)
   * [Arrival rate, service rate, dropout rate](#arrival-rate-service-rate-dropout-rate)
-  * [Utilitization ratio](#utilization-ratio)
+  * [Utilization ratio](#utilization-ratio)
   * [Error ratio](#error-ratio)
   * [Lead time, wait time, work time, step time](#lead-time-wait-time-work-time-step-time)
   * [Count](#count)
