@@ -20,7 +20,7 @@ Contents:
   * [Standard notation](#standard-notation)
 * [Activity tracking](#activity-tracking)
   * [Activity examples](#activity-examples)
-  * [Little's Law](#little-s-law)
+  * [Little's Law](#littles-law)
   * [Key performance indicators (KPIs)](#key-performance-indicators-kpis)
 * [Epilog](#epilog)
   * [See also](#see-also)
