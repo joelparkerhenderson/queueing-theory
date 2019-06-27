@@ -34,13 +34,13 @@ We use queueing theory in our software projects for many purposes:
   * Project management kanban boards
 
   * Inter-process communication message queues
- 
+
   * Devops continuous deployment pipelines
 
 
 ### Project management kanban boards
 
-For example, we want to know how a new feature progresses from design to delivery. 
+For example, we want to know how a new feature progresses from design to delivery.
 
 Some relevant products are e.g. [Asana](https://en.wikipedia.org/wiki/Asana_(software)), [Jira](https://en.wikipedia.org/wiki/Jira_(software)), [Microsoft Project](https://en.wikipedia.org/wiki/Microsoft_Project).
 
@@ -85,9 +85,9 @@ Queue types and service types describe how the queue chooses which items to proc
 
 Queue dropouts are when a customer does not make it through the queue.
 
-  * Balking: when a customer decides not to start waiting for service because the wait time threatens to be too long. 
+  * Balking: when a customer decides not to start waiting for service because the wait time threatens to be too long.
 
-  * Reneging: when a customer who has waited already decides to leave because they’ve wasted too much time. 
+  * Reneging: when a customer who has waited already decides to leave because they’ve wasted too much time.
 
   * Jockeying: when a customer switches between queues in a tandem queue system, trying to get a shorter wait.
 
@@ -194,7 +194,7 @@ Standard notation for queueing theory also uses these symbols:
   * n: the number of items in the system.
 
   * A: the arrival process probability distribution.
-  
+
   * B: the service process probability distribution.
 
   * C: the number of servers.
@@ -224,7 +224,7 @@ Examples:
   * Aσ: Activity dropout rate: how many items are abandoned per time unit.
 
   * Aρ: Activity utilization ratio: how many items are arriving vs. completing.
-  
+
   * Aε: Activity error ratio: how many items are completed with errors vs. total.
 
   * Aτ: Activity lead time: how much time elapses from requested to completed.
@@ -255,9 +255,9 @@ Little's law assumptions:
   * All measurement units are consistent.
 
   * Conservation of flow, meaning the average arrival rate equals the average departure rate.
-  
+
   * All work that enters the system then flows through to completion.
-  
+
   * The system is “stable”, meaning the average age of items are neither increasing or decreasing, and the total number of items is roughly the same at the beginning and at the end.
 
 
@@ -318,9 +318,11 @@ Introductions with more detail:
 
   * [Investopedia: Queueing theory](https://www.investopedia.com/terms/q/queuing-theory.asp)
 
+Blog posts:
+
+  * [It's time for some queueing theory - By Kottke](https://kottke.org/19/01/its-time-for-some-queueing-theory)
 
 
 ### Thanks
 
 [Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations. By Nicole Forsgren, Jez Humble, Gene Kim](https://www.amazon.com/dp/B07B9F83WM). This book is excellent for high level devops, and directly informs our choice of KPIs. The KPIs on this page align with the book's recommendations.
-
