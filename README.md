@@ -323,6 +323,23 @@ Blog posts:
   * [It's time for some queueing theory - By Kottke](https://kottke.org/19/01/its-time-for-some-queueing-theory)
 
 
+[Seven Insights Into Queueing Theory](http://www.treewhimsy.com/TECPB/Articles/SevenInsights.pdf):
+
+  * The slower the service center, the lower the maximum utilization you should plan for at peak load. 
+
+  * It’s very hard to use the last 15% of anything.
+
+  * The closer you are to the edge, the higher the price for being wrong.
+
+  * Response time increases are limited by the number that can wait.
+
+  * Remember this is an average, not a maximum.
+
+  * There is a human denial effect in multiple service centers.
+
+  * Show small improvements in their best light.
+
+
 ### Thanks
 
 [Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations. By Nicole Forsgren, Jez Humble, Gene Kim](https://www.amazon.com/dp/B07B9F83WM). This book is excellent for high level devops, and directly informs our choice of KPIs. The KPIs on this page align with the book's recommendations.
