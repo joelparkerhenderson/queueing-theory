@@ -1,11 +1,12 @@
 # Queueing theory
 
-Queueing theory is the mathematical study of waiting lines, or queues. We use queueing theory in our software development, for purposes such as project management kanban boards, inter-process communication message queues, and devops continuous deployment pipelines.
+Queueing theory is the mathematical study of waiting lines, or queues. We use queueing theory in our software development, for purposes such as analyzing and optimizing our practices and processes, such as our customer service responsiveness, project management kanban planning, inter-process communication message queues, and devops continuous deployment pipelines.
 
 Contents:
 
 * [Introduction](#introduction)
-  * [Project management kanban boards](#project-management-kanban-boards)
+  * [Customer service responsiveness](#customer-service-responsiveness)
+  * [Project management kanban planning](#project-management-kanban-planning)
   * [Inter-process communication message queues](#inter-process-communication-message-queues)
   * [Devops continuous deployment pipelines](#devops-continuous-deployment-pipelines)
 * [Queue terminology](#queue-terminology)
@@ -29,34 +30,43 @@ Contents:
 
 ## Introduction
 
-We use queueing theory in our software projects for many purposes:
+We use queueing theory in our projects for many purposes:
 
-  * Project management kanban boards
+  * Customer service responsiveness
+
+  * Project management kanban planning
 
   * Inter-process communication message queues
 
   * Devops continuous deployment pipelines
 
 
-### Project management kanban boards
+### Customer service responsiveness
 
-For example, we want to know how a new feature progresses from design to delivery.
+For example, we want to analyze how customers request sales help and support help, and how fast we respond.
 
-Some relevant products are e.g. [Asana](https://en.wikipedia.org/wiki/Asana_(software)), [Jira](https://en.wikipedia.org/wiki/Jira_(software)), [Microsoft Project](https://en.wikipedia.org/wiki/Microsoft_Project).
+Some relevant products are e.g. [Salesforce](https://wikipedia.org/wiki/Salesforce), [LiveChat](https://wikipedia.org/wiki/LiveChat), [Zendesk](https://wikipedia.org/wiki/Zendesk).
+
+
+### Project management kanban planning
+
+For example, we want to track the lead times and progress times as a new feature idea evolves from design to delivery.
+
+Some relevant products are e.g. [Asana](https://wikipedia.org/wiki/Asana_(software)), [Jira](https://wikipedia.org/wiki/Jira_(software)), [Microsoft Project](https://wikipedia.org/wiki/Microsoft_Project).
 
 
 ### Inter-process communication message queues
 
-For example, we want to know how one program sends requests to another program.
+For example, we want to maximize throughputs and minimize pressures as one program sends requests to another program.
 
-Some relevant products are e.g. [RabbitMQ](https://en.wikipedia.org/wiki/RabbitMQ), [ActiveMQ](https://en.wikipedia.org/wiki/Apache_ActiveMQ), [ZeroMQ](https://en.wikipedia.org/wiki/ZeroMQ).
+Some relevant products are e.g. [RabbitMQ](https://wikipedia.org/wiki/RabbitMQ), [ActiveMQ](https://wikipedia.org/wiki/Apache_ActiveMQ), [ZeroMQ](https://wikipedia.org/wiki/ZeroMQ).
 
 
 ### Devops continuous deployment pipelines
 
-For example, we use a continuous integration server to create a software release candidate, test it, then deploy it.
+For example, we want to ensure our continuous integration server has capacity to test our software then deploy it.
 
-Some relevant products are e.g. [Jenkins](https://en.wikipedia.org/wiki/Jenkins_(software)), [Bamboo](https://en.wikipedia.org/wiki/Bamboo_(software)), [Azure DevOps](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio#Azure_DevOps).
+Some relevant products are e.g. [Jenkins](https://wikipedia.org/wiki/Jenkins_(software)), [Bamboo](https://wikipedia.org/wiki/Bamboo_(software)), [Azure DevOps](https://wikipedia.org/wiki/Microsoft_Visual_Studio#Azure_DevOps).
 
 
 ## Queue terminology
