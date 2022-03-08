@@ -322,6 +322,8 @@ Introductions with more detail:
 
   * [Queuing Theory: Simple Definition, Notation and Terminology](https://www.statisticshowto.datasciencecentral.com/queuing-theory/)
 
+  * [The most important thing to understand about queues - By Dan Slimmon](https://blog.danslimmon.com/2016/08/26/the-most-important-thing-to-understand-about-queues/)
+
   * [Operations Research - Notes. By J E Beasley](http://people.brunel.ac.uk/~mastjjb/jeb/or/queue.html)
 
   * [Little’s Law – the basis of Lean and Kanban](http://itsadeliverything.com/littles-law-the-basis-of-lean-and-kanban)
