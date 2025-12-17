@@ -256,7 +256,7 @@ Example notation:
 
   * λ is the long-term average effective arrival rate.
 
-  * W is the average time that a customer spends in the system.
+  * W is the long-term average time that a customer spends in the system.
 
   * L = λ W is Little's law.
 
