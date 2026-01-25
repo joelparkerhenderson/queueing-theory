@@ -113,11 +113,11 @@ Our teams use some of the popular notation; we also add some custom notion that 
 
 The most important notation:
 
-  * λ: arrival rate. This measures how fast new items are coming into the queue.
+  * λ (lambda): arrival rate. This measures how fast new items are coming into the queue.
 
-  * μ: service rate. This measures how fast items in the queue are being handled.
+  * μ (mu): service rate. This measures how fast items in the queue are being handled.
 
-  * σ: dropout rate. This measures how fast items are skipping out the queue unhandled.
+  * σ (sigma): dropout rate. This measures how fast items are skipping out the queue unhandled.
 
 Examples:
 
@@ -132,7 +132,7 @@ Examples:
 
 The most important notation that summarizes a queue:
 
-  * ρ: utilization ratio = λ / μ
+  * ρ (rho): utilization ratio = λ / μ
 
 Examples:
 
@@ -147,7 +147,7 @@ Examples:
 
 The most important notation that summarizes a queue's success:
 
-  * ε: error ratio = service failure count / service total count
+  * ε (epsilon): error ratio = service failure count / service total count
 
 Examples:
 
@@ -162,13 +162,13 @@ Examples:
 
 We track four times:
 
-  * τ: lead time = from arrival to finish
+  * τ (tau): lead time = from arrival to finish
 
-  * ω: wait time = from arrival to start of work
+  * ω (omega): wait time = from arrival to start of work
 
-  * φ: work time = from start of work to finish
+  * φ (phi): work time = from start of work to finish
 
-  * θ: step time = from finish to next finish
+  * θ (theta): step time = from finish to next finish
 
 Examples:
 
@@ -185,7 +185,7 @@ Examples:
 
 We count items often, and we use this notation:
 
-  * κ: count
+  * κ (kappa): count
 
 Example:
 
@@ -194,7 +194,6 @@ Example:
   * κ > 100 means there are more than 100 items.
 
   * κ ≫ 100 means there are many more than 100 items.
-
 
 
 ### Standard notation
@@ -284,7 +283,6 @@ We have built many projects, and we believe the most valuable summary indicators
   * Dε = Delivery error ratio. Quality teams may say "change fail rate" or "percentage of rollbacks".
 
   * Rτ = Restore lead time. Site reliability engineers may say "time to restore service" or "mean time to restore (MTTR)".
-
 
 
 ## Epilog
