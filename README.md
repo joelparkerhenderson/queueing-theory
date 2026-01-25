@@ -128,7 +128,7 @@ Examples:
   * λ < μ means the arrival rate is less than the service rate; the queue is getting smaller, other than dropouts.
 
 
-### Utilization ratio
+### Utilization ratio a.k.a. traffic intensity
 
 The most important notation that summarizes a queue:
 
@@ -251,13 +251,13 @@ Little's law is a theorem by John Little which states: the long-term average num
 
 Example notation:
 
-  * L is the long-term average number of customers in the system.
+  * L: long-term average number of customers in the system. We prefer κ̅ (mean kappa).
 
-  * λ is the long-term average effective arrival rate.
+  * λ: long-term average effective arrival rate. We prefer λ̅ (mean lambda).
 
-  * W is the long-term average time that a customer spends in the system.
+  * W: long-term average time an item is in the system. We prefer τ̅ (mean tau).
 
-  * L = λ W is Little's law.
+  * L = λ W is Little's law. We prefer κ̅ = λ̅ τ̅ (mean kappa = mean lamba * mean tau).
 
 Little's law assumptions:
 
