@@ -273,6 +273,41 @@ Useful terms:
 - **Service Level Objective (SLO):** the internal target for that metric (e.g., aim for 99.95% uptime)
 - **Service Level Agreement (SLA):** the formal, contractual promise to the customer (e.g., 99.9% uptime with penalties if missed).
 
+### Mean Time To Respond/Repair/Recover/Resolve
+
+MTTR represents four different measurements:
+
+| Metric                   | Focus               | Measures                             | Start                              | Finish                            |
+| ------------------------ | ------------------- | ------------------------------------ | ---------------------------------- | --------------------------------- |
+| **Mean Time To Respond** | Initial reaction    | Time to acknowledge and begin action | When incident is detected/reported | When team starts working on it    |
+| **Mean Time To Repair**  | Technical fix       | Time to fix the broken item          | When repair work begins            | When item is fixed                |
+| **Mean Time To Recover** | Service restoration | Time to restore full service         | When incident/outage starts        | When service is fully operational |
+| **Mean Time To Resolve** | Complete resolution | Total time from detection to closure | When incident is detected          | When incident is fully closed     |
+
+**Key distinctions:**
+
+**Respond** measures team readiness and alerting effectiveness. A low response time means your monitoring and on-call processes are working well, even if the actual fix takes longer.
+
+**Repair** is narrowly technical—how long does it take to actually fix the broken thing once you're working on it? It excludes detection time, triage, and verification.
+
+**Recover** is about service availability from the customer's perspective. The system might be "repaired" but not yet "recovered" if you still need to restore data, warm up caches, or verify functionality.
+
+**Resolve** is the most comprehensive—it captures the entire incident lifecycle from first detection through post-incident verification and closure.
+
+**Example scenario:**
+
+- 2:00 AM — Outage begins
+- 2:15 AM — Alert fires, on-call acknowledges → **Response time: 10 min**
+- 2:45 AM — Root cause identified, fix deployed → **Repair time: 20 min**
+- 3:00 AM — Service verified working for users → **Recovery time: 30 min**
+- 3:30 AM — Incident ticket closed after verification → **Resolution time: 40 min**
+
+Related metrics:
+
+- MTBF (mean time before failure)
+- MTTF (mean time to failure)
+- MTTA (mean time to acknowledge)
+
 ## Epilog
 
 ### See also
