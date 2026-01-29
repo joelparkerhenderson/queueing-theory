@@ -265,6 +265,14 @@ We have built many projects, and we believe the most valuable summary indicators
 
 - Rτ = Restore lead time. Site reliability engineers may say "time to restore service" or "mean time to restore (MTTR)".
 
+### Service metrics
+
+Useful terms:
+
+- **Service Level Indicator (SLI):** is the metric (e.g., 99.9% uptime)
+- **Service Level Objective (SLO):** the internal target for that metric (e.g., aim for 99.95% uptime)
+- **Service Level Agreement (SLA):** the formal, contractual promise to the customer (e.g., 99.9% uptime with penalties if missed).
+
 ## Epilog
 
 ### See also
