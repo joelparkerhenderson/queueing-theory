@@ -4,42 +4,40 @@ Queueing theory is the mathematical study of waiting lines, or queues. We use qu
 
 Contents:
 
-* [Introduction](#introduction)
-  * [Customer service responsiveness](#customer-service-responsiveness)
-  * [Project management kanban planning](#project-management-kanban-planning)
-  * [Inter-process communication message queues](#inter-process-communication-message-queues)
-  * [Devops continuous deployment pipelines](#devops-continuous-deployment-pipelines)
-* [Queue terminology](#queue-terminology)
-  * [Queue types and service types](#queue-types-and-service-types)
-  * [Queue dropouts](#queue-dropouts)
-* [Queueing theory notation](#queueing-theory-notation)
-  * [Arrival rate, service rate, dropout rate](#arrival-rate-service-rate-dropout-rate)
-  * [Utilization ratio](#utilization-ratio)
-  * [Error ratio](#error-ratio)
-  * [Lead time, wait time, work time, step time](#lead-time-wait-time-work-time-step-time)
-  * [Count](#count)
-  * [Standard notation](#standard-notation)
-* [Activity tracking](#activity-tracking)
-  * [Activity examples](#activity-examples)
-  * [Little's Law](#little-s-law)
-  * [Key performance indicators (KPIs)](#key-performance-indicators-kpis)
-* [Epilog](#epilog)
-  * [See also](#see-also)
-  * [Thanks](#thanks)
-
+- [Introduction](#introduction)
+  - [Customer service responsiveness](#customer-service-responsiveness)
+  - [Project management kanban planning](#project-management-kanban-planning)
+  - [Inter-process communication message queues](#inter-process-communication-message-queues)
+  - [Devops continuous deployment pipelines](#devops-continuous-deployment-pipelines)
+- [Queue terminology](#queue-terminology)
+  - [Queue types and service types](#queue-types-and-service-types)
+  - [Queue dropouts](#queue-dropouts)
+- [Queueing theory notation](#queueing-theory-notation)
+  - [Arrival rate, service rate, dropout rate](#arrival-rate-service-rate-dropout-rate)
+  - [Utilization ratio](#utilization-ratio)
+  - [Error ratio](#error-ratio)
+  - [Lead time, wait time, work time, step time](#lead-time-wait-time-work-time-step-time)
+  - [Count](#count)
+  - [Standard notation](#standard-notation)
+- [Activity tracking](#activity-tracking)
+  - [Activity examples](#activity-examples)
+  - [Little's Law](#little-s-law)
+  - [Key performance indicators (KPIs)](#key-performance-indicators-kpis)
+- [Epilog](#epilog)
+  - [See also](#see-also)
+  - [Thanks](#thanks)
 
 ## Introduction
 
 We use queueing theory in our projects for many purposes:
 
-  * Customer service responsiveness
+- Customer service responsiveness
 
-  * Project management kanban planning
+- Project management kanban planning
 
-  * Inter-process communication message queues
+- Inter-process communication message queues
 
-  * Devops continuous deployment pipelines
-
+- Devops continuous deployment pipelines
 
 ### Customer service responsiveness
 
@@ -47,13 +45,11 @@ For example, we want to analyze how customers request sales help and support hel
 
 Some relevant products are e.g. [Salesforce](https://wikipedia.org/wiki/Salesforce), [LiveChat](https://wikipedia.org/wiki/LiveChat), [Zendesk](https://wikipedia.org/wiki/Zendesk).
 
-
 ### Project management kanban planning
 
 For example, we want to track the lead times and progress times as a new feature idea evolves from design to delivery.
 
-Some relevant products are e.g. [Asana](https://wikipedia.org/wiki/Asana_(software)), [Jira](https://wikipedia.org/wiki/Jira_(software)), [Microsoft Project](https://wikipedia.org/wiki/Microsoft_Project).
-
+Some relevant products are e.g. [Asana](<https://wikipedia.org/wiki/Asana_(software)>), [Jira](<https://wikipedia.org/wiki/Jira_(software)>), [Microsoft Project](https://wikipedia.org/wiki/Microsoft_Project).
 
 ### Inter-process communication message queues
 
@@ -61,46 +57,41 @@ For example, we want to maximize throughputs and minimize pressures as one progr
 
 Some relevant products are e.g. [RabbitMQ](https://wikipedia.org/wiki/RabbitMQ), [ActiveMQ](https://wikipedia.org/wiki/Apache_ActiveMQ), [ZeroMQ](https://wikipedia.org/wiki/ZeroMQ).
 
-
 ### Devops continuous deployment pipelines
 
 For example, we want to ensure our continuous integration server has capacity to test our software then deploy it.
 
-Some relevant products are e.g. [Jenkins](https://wikipedia.org/wiki/Jenkins_(software)), [Bamboo](https://wikipedia.org/wiki/Bamboo_(software)), [Azure DevOps](https://wikipedia.org/wiki/Microsoft_Visual_Studio#Azure_DevOps).
-
+Some relevant products are e.g. [Jenkins](<https://wikipedia.org/wiki/Jenkins_(software)>), [Bamboo](<https://wikipedia.org/wiki/Bamboo_(software)>), [Azure DevOps](https://wikipedia.org/wiki/Microsoft_Visual_Studio#Azure_DevOps).
 
 ## Queue terminology
 
 Queue terminology is a big topic. This section has some of our common terminology. For the examples, we will use the idea of a customer waiting in line.
 
-
 ### Queue types and service types
 
 Queue types and service types describe how the queue chooses which items to process.
 
-  * First In First Out (FIFO): serve the customer who has been waiting for the longest time.
+- First In First Out (FIFO): serve the customer who has been waiting for the longest time.
 
-  * Last In First Out (LIFO): serve the customer who has been waiting for the shortest time.
+- Last In First Out (LIFO): serve the customer who has been waiting for the shortest time.
 
-  * Priority: serve customers based on their priority level; these levels could be based on status, urgency, payment, etc.
+- Priority: serve customers based on their priority level; these levels could be based on status, urgency, payment, etc.
 
-  * Shortest Job First (SJF): serve the customer who needs the smallest amount of service.
+- Shortest Job First (SJF): serve the customer who needs the smallest amount of service.
 
-  * Longest Job First (LJF): serve the customer who needs the largest amount of service.
+- Longest Job First (LJF): serve the customer who needs the largest amount of service.
 
-  * Time Sharing: serve everyone at the same time; service capacity is distributed evenly among everyone waiting.
-
+- Time Sharing: serve everyone at the same time; service capacity is distributed evenly among everyone waiting.
 
 ### Queue dropouts
 
 Queue dropouts are when a customer does not make it through the queue.
 
-  * Balking: when a customer decides not to start waiting for service because the wait time threatens to be too long.
+- Balking: when a customer decides not to start waiting for service because the wait time threatens to be too long.
 
-  * Reneging: when a customer who has waited already decides to leave because they’ve wasted too much time.
+- Reneging: when a customer who has waited already decides to leave because they’ve wasted too much time.
 
-  * Jockeying: when a customer switches between queues in a tandem queue system, trying to get a shorter wait.
-
+- Jockeying: when a customer switches between queues in a tandem queue system, trying to get a shorter wait.
 
 ## Queueing theory notation
 
@@ -108,113 +99,105 @@ Queueing theory uses notation with Greek letters.
 
 Our teams use some of the popular notation; we also add some custom notion that help us with software projects.
 
+### Count
+
+We count items often, and we use this notation:
+
+- κ (kappa): count
+
+Example:
+
+- κ = 100 means there are 100 items in the queue.
+
+- κ > 100 means there are more than 100 items in the queue.
+
+- κ ≫ 100 means there are many more than 100 items in the queue.
 
 ### Arrival rate, service rate, dropout rate
 
 The most important notation:
 
-  * λ (lambda): arrival rate. This measures how fast new items are coming into the queue.
+- λ (lambda): arrival rate. This measures how fast new items are coming into the queue.
 
-  * μ (mu): service rate. This measures how fast items in the queue are being handled.
+- μ (mu): service rate. This measures how fast items in the queue are being handled.
 
-  * σ (sigma): dropout rate. This measures how fast items are skipping out the queue unhandled.
+- σ (sigma): dropout rate. This measures how fast items are skipping out the queue unhandled.
 
 Examples:
 
-  * λ = μ means the arrival rate equals the service rate; the queue is staying the same size, other than dropouts.
+- λ = μ means the arrival rate equals the service rate; the queue is staying the same size, other than dropouts.
 
-  * λ > μ means the arrival rate is greater than the service rate; the queue is getting larger, other than dropouts.
+- λ > μ means the arrival rate is greater than the service rate; the queue is getting larger, other than dropouts.
 
-  * λ < μ means the arrival rate is less than the service rate; the queue is getting smaller, other than dropouts.
-
+- λ < μ means the arrival rate is less than the service rate; the queue is getting smaller, other than dropouts.
 
 ### Utilization ratio a.k.a. traffic intensity
 
 The most important notation that summarizes a queue:
 
-  * ρ (rho): utilization ratio = λ / μ
+- ρ (rho): utilization ratio = λ / μ
 
 Examples:
 
-  * ρ = 1 means the arrival rate is equal to the service rate; the queue is staying the same size.
+- ρ = 1 means the arrival rate is equal to the service rate; the queue is staying the same size.
 
-  * ρ > 1 means the arrival rate is greater than the service rate; the queue is getting larger.
+- ρ > 1 means the arrival rate is greater than the service rate; the queue is getting larger.
 
-  * ρ < 1 means the arrival rate is less than the service rate; the queue is getting smaller.
-
+- ρ < 1 means the arrival rate is less than the service rate; the queue is getting smaller.
 
 ### Error ratio
 
 The most important notation that summarizes a queue's success:
 
-  * ε (epsilon): error ratio = service failure count / service total count
+- ε (epsilon): error ratio = service failure count / service total count
 
 Examples:
 
-  * ε = 0 means no errors.
+- ε = 0 means no errors.
 
-  * ε = 0.1 means 10% of services have an error.
+- ε = 0.1 means 10% of services have an error.
 
-  * ε = 1 means every service has an error.
+- ε = 1 means every service has an error.
 
-
-### Lead time, wait time, work time, step time
+### Lead time, step time, work time, wait time
 
 We track four times:
 
-  * τ (tau): lead time = from arrival to finish
+- τ (tau): lead time = from start of queue to finish of queue
 
-  * ω (omega): wait time = from arrival to start of work
+- θ (theta): step time = from one finish to the next finish
 
-  * φ (phi): work time = from start of work to finish
+- φ (phi): work time = time spent doing actual work a.k.a. processing time
 
-  * θ (theta): step time = from finish to next finish
+- ω (omega): wait time = time spent not doing actual work a.k.a. pending time
 
 Examples:
 
-  * τ = 5s means an item is added to the queue, then serviced 5 seconds later.
+- τ = 5s means an item is added to the queue, then serviced 5 seconds later.
 
-  * ω = 4s means an item waits in the queue for 4 seconds, then work starts.
+- ω = 4s means an item waits in the queue for 4 seconds, then work starts.
 
-  * φ = 1s means an item takes 1 second of work, then is complete.
+- φ = 1s means an item takes 1 second of work, then is complete.
 
-  * θ = 1s means there's 1 second between one completion and the next completion.
-
-
-### Count
-
-We count items often, and we use this notation:
-
-  * κ (kappa): count
-
-Example:
-
-  * κ = 100 means there are 100 items.
-
-  * κ > 100 means there are more than 100 items.
-
-  * κ ≫ 100 means there are many more than 100 items.
-
+- θ = 1s means there's 1 second between one completion and the next completion.
 
 ### Standard notation
 
 Standard notation for queueing theory also uses these symbols:
 
-  * n: the number of items in the system.
+- n: the number of items in the system.
 
-  * A: the arrival process probability distribution.
+- A: the arrival process probability distribution.
 
-  * B: the service process probability distribution.
+- B: the service process probability distribution.
 
-  * C: the number of servers.
+- C: the number of servers.
 
-  * D: the maximum number of items allowed in the queue at any given time, waiting or being served (without getting bumped).
+- D: the maximum number of items allowed in the queue at any given time, waiting or being served (without getting bumped).
 
-  * E: the maximum number of items total.
-
+- E: the maximum number of items total.
 
 ## Activity tracking
-
 
 ### Activity examples
 
@@ -224,26 +207,25 @@ We can efficiently use queuing notation to describe the activity and how it move
 
 Examples:
 
-  * Aκ: Activity count: how many items are in the queue.
+- Aκ: Activity count: how many items are in the queue.
 
-  * Aλ: Activity arrival rate: how many items are incoming per time unit.
+- Aλ: Activity arrival rate: how many items are incoming per time unit.
 
-  * Aμ: Activity service rate: how many items are completed per time unit.
+- Aμ: Activity service rate: how many items are completed per time unit.
 
-  * Aσ: Activity dropout rate: how many items are abandoned per time unit.
+- Aσ: Activity dropout rate: how many items are abandoned per time unit.
 
-  * Aρ: Activity utilization ratio: how many items are arriving vs. completing.
+- Aρ: Activity utilization ratio: how many items are arriving vs. completing.
 
-  * Aε: Activity error ratio: how many items are completed with errors vs. total.
+- Aε: Activity error ratio: how many items are completed with errors vs. total.
 
-  * Aτ: Activity lead time: how much time elapses from requested to completed.
+- Aτ: Activity lead time: how much time elapses from requested to completed.
 
-  * Aω: Activity wait time: how much time elapses from requested to started.
+- Aω: Activity wait time: how much time elapses from requested to started.
 
-  * Aφ: Activity work time: how much time elapses from started to completed.
+- Aφ: Activity work time: how much time elapses from started to completed.
 
-  * Aθ: Activity step time: how much time elapses from completed to next completed.
-
+- Aθ: Activity step time: how much time elapses from completed to next completed.
 
 ### Little's Law
 
@@ -251,24 +233,23 @@ Little's law is a theorem by John Little which states: the long-term average num
 
 Example notation:
 
-  * L: long-term average number of customers in the system. We prefer κ̅ (mean kappa).
+- L: long-term average number of customers in the system. We prefer κ (kappa).
 
-  * λ: long-term average effective arrival rate. We prefer λ̅ (mean lambda).
+- λ: long-term average effective arrival rate.
 
-  * W: long-term average time an item is in the system. We prefer τ̅ (mean tau).
+- W: long-term average time an item is in the system. We prefer τ (tau).
 
-  * L = λ W is Little's law. We prefer κ̅ = λ̅ τ̅ (mean kappa = mean lamba * mean tau).
+- L = λ W is Little's law. We prefer κ = λ τ (kappa = lamba \* tau).
 
 Little's law assumptions:
 
-  * All measurement units are consistent.
+- All measurement units are consistent.
 
-  * Conservation of flow, meaning the average arrival rate equals the average departure rate.
+- Conservation of flow, meaning the average arrival rate equals the average departure rate.
 
-  * All work that enters the system then flows through to completion.
+- All work that enters the system then flows through to completion.
 
-  * The system is “stable”, meaning the average age of items are neither increasing or decreasing, and the total number of items is roughly the same at the beginning and at the end.
-
+- The system is “stable”, meaning the average age of items are neither increasing or decreasing, and the total number of items is roughly the same at the beginning and at the end.
 
 ### Key performance indicators (KPIs)
 
@@ -276,79 +257,75 @@ We typically track many things about the activities in the queue, and we want to
 
 We have built many projects, and we believe the most valuable summary indicators are:
 
-  * Dτ = Delivery lead time. Product teams may say "from concept to customer" or "from idea to implementation".
+- Dτ = Delivery lead time. Product teams may say "from concept to customer" or "from idea to implementation".
 
-  * Dμ = Delivery service rate. Devops teams may say "deployment frequency" or "we ship X times per day".
+- Dμ = Delivery service rate. Devops teams may say "deployment frequency" or "we ship X times per day".
 
-  * Dε = Delivery error ratio. Quality teams may say "change fail rate" or "percentage of rollbacks".
+- Dε = Delivery error ratio. Quality teams may say "change fail rate" or "percentage of rollbacks".
 
-  * Rτ = Restore lead time. Site reliability engineers may say "time to restore service" or "mean time to restore (MTTR)".
-
+- Rτ = Restore lead time. Site reliability engineers may say "time to restore service" or "mean time to restore (MTTR)".
 
 ## Epilog
-
 
 ### See also
 
 Wikipedia:
 
-  * [Queueing theory](https://en.wikipedia.org/wiki/Queueing_theory)
+- [Queueing theory](https://en.wikipedia.org/wiki/Queueing_theory)
 
-  * [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
+- [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
 
-  * [Little's law](https://en.wikipedia.org/wiki/Little%27s_law)
+- [Little's law](https://en.wikipedia.org/wiki/Little%27s_law)
 
-  * [Markov chain](https://en.wikipedia.org/wiki/Markov_chain)
+- [Markov chain](https://en.wikipedia.org/wiki/Markov_chain)
 
 Wikipedia areas where we use queues in many projects:
 
-  * [Project management](https://en.wikipedia.org/wiki/Project_management)
+- [Project management](https://en.wikipedia.org/wiki/Project_management)
 
-  * [Message queue](https://en.wikipedia.org/wiki/Message_queue)
+- [Message queue](https://en.wikipedia.org/wiki/Message_queue)
 
-  * [DevOps](https://en.wikipedia.org/wiki/DevOps)
+- [DevOps](https://en.wikipedia.org/wiki/DevOps)
 
 Introductions by John D. Cook:
 
-  * [The science of waiting in line](https://www.johndcook.com/blog/2019/01/23/queueing/)
+- [The science of waiting in line](https://www.johndcook.com/blog/2019/01/23/queueing/)
 
-  * [Server utilization: Joel on queuing](https://www.johndcook.com/blog/2009/01/30/server-utilization-joel-on-queuing/)
+- [Server utilization: Joel on queuing](https://www.johndcook.com/blog/2009/01/30/server-utilization-joel-on-queuing/)
 
-  * [What happens when you add a new teller?](https://www.johndcook.com/blog/2008/10/21/what-happens-when-you-add-a-new-teller/)
+- [What happens when you add a new teller?](https://www.johndcook.com/blog/2008/10/21/what-happens-when-you-add-a-new-teller/)
 
 Introductions with more detail:
 
-  * [Queuing Theory: Simple Definition, Notation and Terminology](https://www.statisticshowto.datasciencecentral.com/queuing-theory/)
+- [Queuing Theory: Simple Definition, Notation and Terminology](https://www.statisticshowto.datasciencecentral.com/queuing-theory/)
 
-  * [The most important thing to understand about queues - By Dan Slimmon](https://blog.danslimmon.com/2016/08/26/the-most-important-thing-to-understand-about-queues/)
+- [The most important thing to understand about queues - By Dan Slimmon](https://blog.danslimmon.com/2016/08/26/the-most-important-thing-to-understand-about-queues/)
 
-  * [Operations Research - Notes. By J E Beasley](http://people.brunel.ac.uk/~mastjjb/jeb/or/queue.html)
+- [Operations Research - Notes. By J E Beasley](http://people.brunel.ac.uk/~mastjjb/jeb/or/queue.html)
 
-  * [Little’s Law – the basis of Lean and Kanban](http://itsadeliverything.com/littles-law-the-basis-of-lean-and-kanban)
+- [Little’s Law – the basis of Lean and Kanban](http://itsadeliverything.com/littles-law-the-basis-of-lean-and-kanban)
 
-  * [Investopedia: Queueing theory](https://www.investopedia.com/terms/q/queuing-theory.asp)
+- [Investopedia: Queueing theory](https://www.investopedia.com/terms/q/queuing-theory.asp)
 
 Blog posts:
 
-  * [It's time for some queueing theory - By Kottke](https://kottke.org/19/01/its-time-for-some-queueing-theory)
-
+- [It's time for some queueing theory - By Kottke](https://kottke.org/19/01/its-time-for-some-queueing-theory)
 
 [Seven Insights Into Queueing Theory](http://www.treewhimsy.com/TECPB/Articles/SevenInsights.pdf):
 
-  * The slower the service center, the lower the maximum utilization you should plan for at peak load. 
+- The slower the service center, the lower the maximum utilization you should plan for at peak load.
 
-  * It’s very hard to use the last 15% of anything.
+- It’s very hard to use the last 15% of anything.
 
-  * The closer you are to the edge, the higher the price for being wrong.
+- The closer you are to the edge, the higher the price for being wrong.
 
-  * Response time increases are limited by the number that can wait.
+- Response time increases are limited by the number that can wait.
 
-  * Remember this is an average, not a maximum.
+- Remember this is an average, not a maximum.
 
-  * There is a human denial effect in multiple service centers.
+- There is a human denial effect in multiple service centers.
 
-  * Show small improvements in their best light.
-
+- Show small improvements in their best light.
 
 ### Thanks
 
