@@ -174,9 +174,9 @@ This has historical roots and can lead to confusion and mistakes, epsecially for
 context and practitioners using queueing theory where there's a significant need
 to track failures and skips.
 
-- Theoretical View: The service rate is a pure measurement of speed (e.g., jobs per second), regardless of whether the jobs are succeses, failures, skips, etc.
+- Theoretical View: The service rate is a pure measurement of speed (e.g., jobs per second), regardless of whether the jobs are successes, failures, skips, etc.
 
-- Processing View: The service rate includes whatever the queue spends time processing, meaning successes or failures, but does not include not skips.
+- Processing View: The service rate includes whatever the queue spends time processing, meaning successes or failures, but does not include skips.
 
 - Technology View: In applied fields such as software engineering, the service rate measures only successes, whereas the error rate measures failures, and the skip rate measures dropouts.
 
@@ -196,7 +196,7 @@ Skip rate details:
 
 - σ (sigma): skip rate. This measures how many items skip out the queue unhandled a.k.a. dropouts.
 
-A skip is when a item leaves the queue without any signficant processing:
+A skip is when an item leaves the queue without any significant processing:
 
 - Abandoning: when a customer starts a queue, then leaves, for any reason.
 
@@ -262,7 +262,7 @@ Standard notation for queueing theory also uses these symbols:
 
 ### Activity examples
 
-Suppose we have something we want to track, and we call it something generic such as "Activity" and abbrievated as "A".
+Suppose we have something we want to track, and we call it something generic such as "Activity" and abbreviated as "A".
 
 We can efficiently use queuing notation to describe the activity and how it moves through a queue.
 
